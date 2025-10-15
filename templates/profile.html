@@ -94,7 +94,7 @@
                         </svg>
                     </div>
                     <span class="ml-2 text-sm text-neutral-400 dark:text-neutral-500 hidden lg:block" :class="{ '!hidden': showDrawer }">
-                        Search
+                        ค้นหา
                     </span>
                 </button>
                 <div class="flex flex-col gap-1.5 py-3">
@@ -105,7 +105,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0 pointer-events-none' : showDrawer }">
-                            For You
+                            หน้าหลัก
                         </span>
                     </button>
                     <button id="explore" @click="window.location.href = 'explore.html'" class="button-nav dark:hover:!bg-neutral-800">
@@ -116,7 +116,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Explore
+                            สืบค้น
                         </span>
                     </button>
                     <button id="following" class="button-nav dark:hover:!bg-neutral-800">
@@ -126,7 +126,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Following
+                            ที่ท่านติดตาม
                         </span>
                     </button>
                     <button id="friends" class="button-nav dark:hover:!bg-neutral-800">
@@ -136,7 +136,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Friends
+                            เพื่อน
                         </span>
                     </button>
                     <button id="upload" @click="window.location.href = 'upload.html'" class="button-nav dark:hover:!bg-neutral-800">
@@ -147,7 +147,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Upload
+                            อัพโหลด
                         </span>
                     </button>
                     <button id="activity" class="button-nav dark:hover:!bg-neutral-800">
@@ -157,7 +157,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Activity
+                            กิจกรรม
                         </span>
                     </button>
                     <button id="messages" class="button-nav dark:hover:!bg-neutral-800">
@@ -167,7 +167,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Messages
+                            รับส่งข้อความ
                         </span>
                     </button>
                     <button id="profile" @click="window.location.href = 'profile.html'" class="button-nav dark:hover:!bg-neutral-800">
@@ -177,7 +177,7 @@
                             </div>
                         </div>
                         <span class="text-rose-500" :class="{ '!opacity-0' : showDrawer }">
-                            Profile
+                            รายละเอียดผู้ใช้งาน
                         </span>
                     </button>
                     <button id="more" @click="showDrawer = !showDrawer; showMore = true" class="button-nav dark:hover:!bg-neutral-800">
@@ -187,7 +187,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            More
+                            อื่นๆ
                         </span>
                     </button>
                 </div>
@@ -212,9 +212,9 @@
                         </svg>
                     </div>
                 </button>
-                <h2 class="pl-2 mb-7">Search</h2>
+                <h2 class="pl-2 mb-7">ค้นหา</h2>
                 <div class="relative">
-                    <input x-model="searchQuery" type="search" placeholder="Search" class="w-full h-10 bg-neutral-100 dark:bg-neutral-800 rounded-full pl-4 text-sm text-neutral-700 dark:text-white focus:outline focus:outline-neutral-300 dark:focus:outline-neutral-600" />
+                    <input x-model="searchQuery" type="search" placeholder="ค้นหา" class="w-full h-10 bg-neutral-100 dark:bg-neutral-800 rounded-full pl-4 text-sm text-neutral-700 dark:text-white focus:outline focus:outline-neutral-300 dark:focus:outline-neutral-600" />
                     <button x-show="searchQuery" @click="searchQuery = ''" class="absolute right-4 top-3 text-black cursor-pointer">
                         <div class="size-4 fill-neutral-400 dark:fill-neutral-500">
                             <svg viewBox="0 0 48 48">
@@ -232,11 +232,11 @@
                         </svg>
                     </div>
                 </button>
-                <h2 class="pl-2 mb-7">More</h2>
+                <h2 class="pl-2 mb-7">อื่นๆ</h2>
                 <ul class="flex flex-col gap-1">
                     <li>
                         <button @click="resetAll(); showColorModes = true" class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Dark mode</span>
+                            <span class="font-medium">โหมดกลางคืน</span>
                             <div class="size-4 fill-neutral-400">
                                 <svg viewBox="0 0 48 48">
                                     <path d="M28.74 24 15.08 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0L34.54 23.3a1 1 0 0 1 0 1.42l-16.2 16.21a1 1 0 0 1-1.42 0l-1.84-1.84a1 1 0 0 1 0-1.41L28.74 24Z"></path>
@@ -246,12 +246,12 @@
                     </li>
                     <li>
                         <button class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Settings</span>
+                            <span class="font-medium">ตั้งค่า</span>
                         </button>
                     </li>
                     <li>
-                        <button class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Log out</span>
+                        <button @click="window.location.href = 'index.html'" class="button-rounded dark:hover:!bg-neutral-800">
+                            <span class="font-medium">ล็อกเอ้าท์</span>
                         </button>
                     </li>
                 </ul>
@@ -265,12 +265,12 @@
                             </svg>
                         </div>
                     </button>
-                    <h2 class="pl-2">Dark mode</h2>
+                    <h2 class="pl-2">โหมดกลางคืน</h2>
                 </div>
                 <ul class="flex flex-col gap-1">
                     <li>
                         <button @click="darkMode = true" class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Dark mode</span>
+                            <span class="font-medium">โหมดกลางคืน</span>
                             <div x-show="darkMode" class="size-3.5">
                                 <svg viewBox="0 0 48 48">
                                     <path d="M43 6.08c.7.45 1.06.67 1.25.98.16.27.23.59.2.9-.03.36-.26.72-.7 1.43L23.06 42.14a3.5 3.5 0 0 1-5.63.39L4.89 27.62c-.54-.64-.81-.96-.9-1.32a1.5 1.5 0 0 1 .09-.92c.14-.33.46-.6 1.1-1.14l1.69-1.42c.64-.54.96-.81 1.31-.9.3-.06.63-.04.92.09.34.14.6.46 1.15 1.1l9.46 11.25 18.11-28.7c.45-.72.68-1.07.99-1.26.27-.16.59-.23.9-.2.36.03.71.25 1.43.7L43 6.08Z"></path>
@@ -280,7 +280,7 @@
                     </li>
                     <li>
                         <button @click="darkMode = false" class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Light mode</span>
+                            <span class="font-medium">โหมดกลางวัน</span>
                             <div x-show="!darkMode" class="size-3.5">
                                 <svg viewBox="0 0 48 48">
                                     <path d="M43 6.08c.7.45 1.06.67 1.25.98.16.27.23.59.2.9-.03.36-.26.72-.7 1.43L23.06 42.14a3.5 3.5 0 0 1-5.63.39L4.89 27.62c-.54-.64-.81-.96-.9-1.32a1.5 1.5 0 0 1 .09-.92c.14-.33.46-.6 1.1-1.14l1.69-1.42c.64-.54.96-.81 1.31-.9.3-.06.63-.04.92.09.34.14.6.46 1.15 1.1l9.46 11.25 18.11-28.7c.45-.72.68-1.07.99-1.26.27-.16.59-.23.9-.2.36.03.71.25 1.43.7L43 6.08Z"></path>
@@ -301,15 +301,15 @@
                     </div>
                     <div class="flex flex-col gap-3 items-center md:items-start text-center md:text-left">
                         <div class="space-x-4 items-end">
-                            <span class="text-2xl font-bold">ajudmeister</span>
-                            <span class="text-lg font-medium">Andreas Jud</span>
+                            <span class="text-2xl font-bold">mac</span>
+                            <span class="text-lg font-medium">Mac Paramee</span>
                         </div>
                         <div class="flex gap-2 font-medium">
                             <button class="bg-rose-500 hover:bg-rose-600 text-white rounded-md px-7 py-2">
-                                Follow
+                                ติดตาม
                             </button>
                             <button class="bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md px-7 py-2">
-                                Message
+                                ข้อความ
                             </button>
                             <button class="bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md px-7 py-2">
                                 <div class="size-5">
@@ -321,18 +321,18 @@
                         </div>
                         <div class="flex gap-5">
                             <div>
-                                <span class="font-bold mr-1">3</span>Following
+                                <span class="font-bold mr-1">3</span>ที่ท่านติดตาม
                             </div>
                             <div>
-                                <span class="font-bold mr-1">3</span>Followers
+                                <span class="font-bold mr-1">3</span>ผู้ติดตามท่าน
                             </div>
                             <div>
-                                <span class="font-bold mr-1">3</span>Likes
+                                <span class="font-bold mr-1">3</span>ไลค์
                             </div>
                         </div>
                         <div class="leading-5">
-                            Digital solopreneur from Italy<br>
-                            Stay-at-home dad
+                            รายละเอียด<br>
+                            ประวัติสมาขิก
                         </div>
                         <div class="flex gap-1 items-center">
                             <div class="size-5 fill-neutral-700 dark:fill-white -ml-1">
@@ -356,7 +356,7 @@
                                             <path d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                                         </svg>
                                     </div>
-                                    <span class="hidden sm:block">Posts</span>
+                                    <span class="hidden sm:block">โพสต์</span>
                                 </div>
                             </button>
                             <button @click="selectedTab = 'reposts'" class="px-4 xl:px-7 pb-2 border-b-2" :class="selectedTab === 'reposts' ? 'border-black dark:border-white' : 'text-neutral-500 fill-neutral-500 border-transparent'">
@@ -366,7 +366,7 @@
                                             <path d="M37.7 15v19.7l3.48-3.7a.7.7 0 0 1 .99-.03l1.46 1.37c.28.26.3.7.03.99l-6.26 6.66a2.3 2.3 0 0 1-3.34.01l-6.36-6.66a.7.7 0 0 1 .02-.99l1.45-1.38a.7.7 0 0 1 .99.02l4.14 4.34V15a4.3 4.3 0 0 0-4.3-4.3h-3.5a.7.7 0 0 1-.7-.7V8c0-.39.31-.7.7-.7H30a7.7 7.7 0 0 1 7.7 7.7ZM17.84 17.34 13.7 13v20a4.3 4.3 0 0 0 4.3 4.3h3.5c.39 0 .7.31.7.7v2a.7.7 0 0 1-.7.7H18a7.7 7.7 0 0 1-7.7-7.7V13.63l-3.48 3.7a.7.7 0 0 1-.99.03L4.37 16a.7.7 0 0 1-.03-.98l6.26-6.67a2.3 2.3 0 0 1 3.34-.01l6.36 6.66a.7.7 0 0 1-.02.99l-1.45 1.38a.7.7 0 0 1-.99-.02Z"></path>
                                         </svg>
                                     </div>
-                                    <span class="hidden sm:block">Reposts</span>
+                                    <span class="hidden sm:block">รีโพสต์</span>
                                 </div>
                             </button>
                             <button @click="selectedTab = 'favorites'" class="px-4 xl:px-7 pb-2 border-b-2" :class="selectedTab === 'favorites' ? 'border-black dark:border-white' : 'text-neutral-500 fill-neutral-500 border-transparent'">
@@ -376,7 +376,7 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
                                         </svg>
                                     </div>
-                                    <span class="hidden sm:block">Favorites</span>
+                                    <span class="hidden sm:block">โพสต์ที่ท่านชื่นชอบ</span>
                                 </div>
                             </button>
                             <button @click="selectedTab = 'liked'" class="px-4 xl:px-7 pb-2 border-b-2" :class="selectedTab === 'liked' ? 'border-black dark:border-white' : 'text-neutral-500 fill-neutral-500 border-transparent'">
@@ -386,20 +386,20 @@
                                             <path d="M40.96 24.15c1.83-4.8 1.05-8.61-.8-11.33a10.87 10.87 0 0 0-6.34-4.49 9.43 9.43 0 0 0-6.83 1.17c-1.08.65-2.1 1.53-2.99 2.66-.9-1.13-1.9-2.01-3-2.66a9.43 9.43 0 0 0-6.82-1.17 10.87 10.87 0 0 0-6.34 4.49c-1.85 2.72-2.63 6.54-.8 11.33 1.43 3.74 4.5 7.23 7.6 9.98a46.31 46.31 0 0 0 8.6 6.12l.76.4.76-.4a46.31 46.31 0 0 0 8.6-6.12c3.1-2.75 6.17-6.24 7.6-9.98ZM24 17.58c2.3-2.88 4.7-6.2 9.03-5.33a6.95 6.95 0 0 1 3.82 2.81c1.07 1.58 1.76 4.02.37 7.66-1.09 2.86-3.6 5.82-6.51 8.43A44.84 44.84 0 0 1 24 36.09a44.84 44.84 0 0 1-6.7-4.94c-2.93-2.6-5.43-5.57-6.52-8.43-1.4-3.64-.7-6.08.37-7.66a6.95 6.95 0 0 1 3.82-2.8c4.33-.88 6.73 2.44 9.03 5.32Z"></path>
                                         </svg>
                                     </div>
-                                    <span class="hidden sm:block">Liked</span>
+                                    <span class="hidden sm:block">โพสต์ที่ท่านกดไลค์</span>
                                 </div>
                             </button>
                         </div>
                         <div x-show="selectedTab === 'posts'" class="w-max md:-mt-2 py-3 md:py-0 mx-auto md:mx-0">
                             <div x-data="{ selectedFilter: 'latest' }" class="flex text-xs bg-neutral-200 dark:bg-neutral-800 rounded-md p-0.5">
                                 <button @click="selectedFilter = 'latest'" class="px-3 py-2 rounded-sm" :class="selectedFilter === 'latest' ? 'bg-white dark:bg-neutral-600' : 'text-neutral-500'">
-                                    Latest
+                                    ล่าสุด
                                 </button>
                                 <button @click="selectedFilter = 'popular'" class="px-3 py-2 rounded-sm" :class="selectedFilter === 'popular' ? 'bg-white dark:bg-neutral-600' : 'text-neutral-500'">
-                                    Popular
+                                    ยอดนิยม
                                 </button>
                                 <button @click="selectedFilter = 'oldest'" class="px-3 py-2 rounded-sm" :class="selectedFilter === 'oldest' ? 'bg-white dark:bg-neutral-600' : 'text-neutral-500'">
-                                    Oldest
+                                    เก่าสุด
                                 </button>
                             </div>
                         </div>
@@ -591,20 +591,20 @@
                         </div>
                         <div x-show="selectedTab === 'reposts'" x-cloak >
                             <div class="text-center pt-32">
-                                <div class="font-bold text-2xl">No Reposts yet</div>
-                                <div class="mt-2">Posts you reposted will appear here</div>
+                                <div class="font-bold text-2xl">ยังไม่มีการรีโพสต์</div>
+                                <div class="mt-2">สิ่งที่ท่านรีโพสต์จะปรากฏตรงนี้</div>
                             </div>
                         </div>
                         <div x-show="selectedTab === 'favorites'" x-cloak >
                             <div class="text-center pt-32">
-                                <div class="font-bold text-2xl">Favorite posts</div>
-                                <div class="mt-2">Your favorite posts will appear here</div>
+                                <div class="font-bold text-2xl">โพสต์ยอดนิยม</div>
+                                <div class="mt-2">โพสต์ยอดนิยมของท่านจะปรากฏตรงนี้</div>
                             </div>
                         </div>
                         <div x-show="selectedTab === 'liked'" x-cloak >
                             <div class="text-center pt-32">
-                                <div class="font-bold text-2xl">No liked posts yet</div>
-                                <div class="mt-2">Posts you liked will appear here</div>
+                                <div class="font-bold text-2xl">โพสต์ที่ท่านกดไลค์</div>
+                                <div class="mt-2">โพสต์ที่ท่านกดไลค์จะปรากฏตรงนี้</div>
                             </div>
                         </div>
                     </tabs-content>

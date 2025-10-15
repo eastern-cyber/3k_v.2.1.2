@@ -94,7 +94,7 @@
                         </svg>
                     </div>
                     <span class="ml-2 text-sm text-neutral-400 dark:text-neutral-500 hidden lg:block" :class="{ '!hidden': showDrawer }">
-                        Search
+                        ค้นหา
                     </span>
                 </button>
                 <div class="flex flex-col gap-1.5 py-3">
@@ -105,7 +105,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0 pointer-events-none' : showDrawer }">
-                            For You
+                            หน้าหลัก
                         </span>
                     </button>
                     <button id="explore" @click="window.location.href = 'explore.html'" class="button-nav dark:hover:!bg-neutral-800">
@@ -116,7 +116,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Explore
+                            สืบค้น
                         </span>
                     </button>
                     <button id="following" class="button-nav dark:hover:!bg-neutral-800">
@@ -126,7 +126,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Following
+                            ที่ท่านติดตาม
                         </span>
                     </button>
                     <button id="friends" class="button-nav dark:hover:!bg-neutral-800">
@@ -136,7 +136,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Friends
+                            เพื่อน
                         </span>
                     </button>
                     <button id="upload" @click="window.location.href = 'upload.html'" class="button-nav dark:hover:!bg-neutral-800">
@@ -147,7 +147,7 @@
                             </svg>
                         </div>
                         <span class="text-rose-500" :class="{ '!opacity-0' : showDrawer }">
-                            Upload
+                            อัพโหลด
                         </span>
                     </button>
                     <button id="activity" class="button-nav dark:hover:!bg-neutral-800">
@@ -157,7 +157,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Activity
+                            กิจกรรม
                         </span>
                     </button>
                     <button id="messages" class="button-nav dark:hover:!bg-neutral-800">
@@ -167,7 +167,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Messages
+                            รับส่งข้อความ
                         </span>
                     </button>
                     <button id="profile" @click="window.location.href = 'profile.html'" class="button-nav dark:hover:!bg-neutral-800">
@@ -177,7 +177,7 @@
                             </div>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            Profile
+                            รายละเอียดผู้ใช้งาน
                         </span>
                     </button>
                     <button id="more" @click="showDrawer = !showDrawer; showMore = true" class="button-nav dark:hover:!bg-neutral-800">
@@ -187,7 +187,7 @@
                             </svg>
                         </div>
                         <span :class="{ '!opacity-0' : showDrawer }">
-                            More
+                            อื่นๆ
                         </span>
                     </button>
                 </div>
@@ -212,9 +212,9 @@
                         </svg>
                     </div>
                 </button>
-                <h2 class="pl-2 mb-7">Search</h2>
+                <h2 class="pl-2 mb-7">ค้นหา</h2>
                 <div class="relative">
-                    <input x-model="searchQuery" type="search" placeholder="Search" class="w-full h-10 bg-neutral-100 dark:bg-neutral-800 rounded-full pl-4 text-sm text-neutral-700 dark:text-white focus:outline focus:outline-neutral-300 dark:focus:outline-neutral-600" />
+                    <input x-model="searchQuery" type="search" placeholder="ค้นหา" class="w-full h-10 bg-neutral-100 dark:bg-neutral-800 rounded-full pl-4 text-sm text-neutral-700 dark:text-white focus:outline focus:outline-neutral-300 dark:focus:outline-neutral-600" />
                     <button x-show="searchQuery" @click="searchQuery = ''" class="absolute right-4 top-3 text-black cursor-pointer">
                         <div class="size-4 fill-neutral-400 dark:fill-neutral-500">
                             <svg viewBox="0 0 48 48">
@@ -232,11 +232,11 @@
                         </svg>
                     </div>
                 </button>
-                <h2 class="pl-2 mb-7">More</h2>
+                <h2 class="pl-2 mb-7">อื่นๆ</h2>
                 <ul class="flex flex-col gap-1">
                     <li>
                         <button @click="resetAll(); showColorModes = true" class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Dark mode</span>
+                            <span class="font-medium">โหมดกลางคืน</span>
                             <div class="size-4 fill-neutral-400">
                                 <svg viewBox="0 0 48 48">
                                     <path d="M28.74 24 15.08 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0L34.54 23.3a1 1 0 0 1 0 1.42l-16.2 16.21a1 1 0 0 1-1.42 0l-1.84-1.84a1 1 0 0 1 0-1.41L28.74 24Z"></path>
@@ -246,12 +246,12 @@
                     </li>
                     <li>
                         <button class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Settings</span>
+                            <span class="font-medium">ตั้งค่า</span>
                         </button>
                     </li>
                     <li>
-                        <button class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Log out</span>
+                        <button @click="window.location.href = 'index.html'" class="button-rounded dark:hover:!bg-neutral-800">
+                            <span class="font-medium">ล็อกเอ้าท์</span>
                         </button>
                     </li>
                 </ul>
@@ -265,12 +265,12 @@
                             </svg>
                         </div>
                     </button>
-                    <h2 class="pl-2">Dark mode</h2>
+                    <h2 class="pl-2">โหมดกลางคืน</h2>
                 </div>
                 <ul class="flex flex-col gap-1">
                     <li>
                         <button @click="darkMode = true" class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Dark mode</span>
+                            <span class="font-medium">โหมดกลางคืน</span>
                             <div x-show="darkMode" class="size-3.5">
                                 <svg viewBox="0 0 48 48">
                                     <path d="M43 6.08c.7.45 1.06.67 1.25.98.16.27.23.59.2.9-.03.36-.26.72-.7 1.43L23.06 42.14a3.5 3.5 0 0 1-5.63.39L4.89 27.62c-.54-.64-.81-.96-.9-1.32a1.5 1.5 0 0 1 .09-.92c.14-.33.46-.6 1.1-1.14l1.69-1.42c.64-.54.96-.81 1.31-.9.3-.06.63-.04.92.09.34.14.6.46 1.15 1.1l9.46 11.25 18.11-28.7c.45-.72.68-1.07.99-1.26.27-.16.59-.23.9-.2.36.03.71.25 1.43.7L43 6.08Z"></path>
@@ -280,7 +280,7 @@
                     </li>
                     <li>
                         <button @click="darkMode = false" class="button-rounded dark:hover:!bg-neutral-800">
-                            <span class="font-medium">Light mode</span>
+                            <span class="font-medium">โหมดกลางวัน</span>
                             <div x-show="!darkMode" class="size-3.5">
                                 <svg viewBox="0 0 48 48">
                                     <path d="M43 6.08c.7.45 1.06.67 1.25.98.16.27.23.59.2.9-.03.36-.26.72-.7 1.43L23.06 42.14a3.5 3.5 0 0 1-5.63.39L4.89 27.62c-.54-.64-.81-.96-.9-1.32a1.5 1.5 0 0 1 .09-.92c.14-.33.46-.6 1.1-1.14l1.69-1.42c.64-.54.96-.81 1.31-.9.3-.06.63-.04.92.09.34.14.6.46 1.15 1.1l9.46 11.25 18.11-28.7c.45-.72.68-1.07.99-1.26.27-.16.59-.23.9-.2.36.03.71.25 1.43.7L43 6.08Z"></path>
@@ -310,10 +310,10 @@
                                     <path d="M33.58 4.5H14.42c-1.33 0-2.45 0-3.37.07-.95.08-1.86.25-2.73.7a7 7 0 0 0-3.06 3.05 7.14 7.14 0 0 0-.69 2.73 44.6 44.6 0 0 0-.07 3.37v19.16c0 1.33 0 2.45.07 3.37.08.95.25 1.86.7 2.73a7 7 0 0 0 3.05 3.06c.87.44 1.78.6 2.73.69.92.07 2.04.07 3.37.07h19.16c1.33 0 2.45 0 3.37-.07a7.14 7.14 0 0 0 2.73-.7 7 7 0 0 0 3.06-3.05c.44-.87.6-1.78.69-2.73.07-.92.07-2.04.07-3.37V14.42c0-1.33 0-2.45-.07-3.37a7.14 7.14 0 0 0-.7-2.73 7 7 0 0 0-3.05-3.06 7.14 7.14 0 0 0-2.73-.69 44.6 44.6 0 0 0-3.37-.07ZM10.14 8.83c.2-.1.53-.21 1.24-.27.73-.06 1.69-.06 3.12-.06h19c1.43 0 2.39 0 3.12.06a3.3 3.3 0 0 1 1.24.27 3 3 0 0 1 1.31 1.3c.1.21.21.54.27 1.25.06.73.06 1.69.06 3.12v19c0 1.43 0 2.39-.06 3.12a3.3 3.3 0 0 1-.27 1.24 3 3 0 0 1-1.3 1.31c-.21.1-.54.21-1.25.27-.73.06-1.69.06-3.12.06h-19c-1.43 0-2.39 0-3.12-.06a3.3 3.3 0 0 1-1.24-.27 3 3 0 0 1-1.31-1.3c-.1-.21-.21-.54-.27-1.25-.06-.73-.06-1.69-.06-3.12v-19c0-1.43 0-2.39.06-3.12a3.3 3.3 0 0 1 .27-1.24 3 3 0 0 1 1.3-1.31Z"></path>
                                 </svg>
                             </div>
-                            <h1>Select image to upload</h1>
-                            <div class="text-neutral-500 mb-3">Or drag and drop it here</div>
+                            <h1>เลือกภาพที่ต้องการอัพโหลด</h1>
+                            <div class="text-neutral-500 mb-3">หรือลากไฟล์ภาพมาปล่อยตรงนี้</div>
                             <button @click="$refs.inputFileSelected.click()" class="bg-rose-500 hover:bg-rose-600 text-white rounded-md px-7 py-2 font-medium" :class="{ 'opacity-0' : isDragging }">
-                                Select Image
+                                เลือกภาพ
                             </button>
                             <input class="hidden" type="file" accept="image/*" x-ref="inputFileSelected" @change="fileSelected" />
                         </div>
@@ -323,8 +323,8 @@
                             <div class="flex items-center order-2 lg:order-1">
                                 <div class="flex flex-col gap-4 w-full">
                                     <div>
-                                        <label class="block font-bold text-neutral-600">Caption</label>
-                                        <textarea x-model="caption" placeholder="Add a caption here..." class="w-full min-h-36 py-3 px-4 bg-neutral-100 dark:bg-neutral-900 rounded-lg outline-none resize-none"></textarea>
+                                        <label class="block font-bold text-neutral-600">แค๊ปชั่น</label>
+                                        <textarea x-model="caption" placeholder="เพื่มแค๊ปชั่น..." class="w-full min-h-36 py-3 px-4 bg-neutral-100 dark:bg-neutral-900 rounded-lg outline-none resize-none"></textarea>
                                     </div>
                                     <div>
                                         <label class="block font-bold text-neutral-600">Hashtags</label>
@@ -332,10 +332,10 @@
                                     </div>
                                     <div class="flex gap-3">
                                         <button type="submit" class="bg-rose-500 hover:bg-rose-600 text-white rounded-md px-7 py-2 font-medium">
-                                            Submit Post
+                                            ส่งโพสต์
                                         </button>
                                         <button @click="discardUpload" type="button" class="bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-800/80 text-neutral-500 rounded-md px-4 py-2 font-medium">
-                                            Discard
+                                            ข้ามไป
                                         </button>
                                     </div>
                                 </div>

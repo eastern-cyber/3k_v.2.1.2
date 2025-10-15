@@ -65,9 +65,9 @@
                             </div>
                         </div>
                         <a href="" class="inline-block align-top text-xs font-medium text-neutral-500 hover:underline hover:text-black mb-6">
-                            Forgot password?
+                            ลืมรหัสผ่าน?
                         </a>
-                        <button x-bind:type="buttonActive ? 'submit' : 'button'" class="button" x-bind:class="{ 'button-active': buttonActive }">Log in</button>
+                        <button @click="window.location.href = 'home.html'" x-bind:type="buttonActive ? 'submit' : 'button'" class="button" x-bind:class="{ 'button-active': buttonActive }">ล็อกอิน</button>
                     </form>
                 </div>
                 <div class="flex justify-center">
